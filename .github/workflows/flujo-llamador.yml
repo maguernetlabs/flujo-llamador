@@ -1,0 +1,15 @@
+name: Flujo Llamador
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+  
+jobs:
+  call-workflow:
+    uses: maguernetlabs/flujo-llamado/.github/workflows/flujo-reutilizable.yml@main
+    with:
+      username: mariolo
